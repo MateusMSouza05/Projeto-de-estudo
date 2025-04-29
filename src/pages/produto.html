@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Mudei lang para pt-BR -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adega Mateus</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/produto.css">
+</head>
+<body>
+    <header>
+        <div class="logo-header">
+            <img src="../assets/imgs/logo.png" alt="Logo Adega Mateus" class="logo-header">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>               
+                <li><a href="../pages/carrinhoDeCompra.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Container principal que será preenchido -->
+        <div class="product-page-container" id="product-details-area">
+            <!-- Área da Imagem -->
+            <div class="product-image-section">
+                <img src="" alt="Imagem do Produto" class="main-product-image" id="product-image">
+            </div>
+            <!-- Área de Detalhes -->
+            <div class="product-details-section">
+                <h1 class="product-title" id="product-name">Nome do Produto</h1>
+                <ul class="product-attributes" id="product-attributes">
+                    <!-- Atributos serão adicionados aqui -->
+                </ul>
+                <div class="product-description" id="product-description">
+                    <!-- Descrição será adicionada aqui -->
+                </div>
+                <div class="product-pricing">
+                    <p class="price-subscriber">Preço: <span class="price-value" id="product-price">R$ 0,00</span></p>
+                </div>
+                <div class="product-actions">
+                    <button type="button" class="buy-button" id="add-to-cart-button">Adicionar ao carrinho</button>
+                    <button type="button" class="wishlist-button" aria-label="Adicionar à lista de desejos">
+                        <span class="icon-heart">❤️</span> </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mensagem caso o produto não seja encontrado -->
+        <div id="product-not-found" style="display: none; text-align: center; margin-top: 40px;">
+            <h2>Produto não encontrado!</h2>
+            <p><a href="../../index.html">Voltar para a loja</a></p>
+        </div>
+    </main>
+    <footer>
+        <section id="info-contato">
+            <h4>Atendimento ao Cliente</h4>
+            <p>Email: contato@adegamateus.com</p> 
+            <p>Telefone: (11) 3603-5492</p>
+        </section>
+        <section id="redes-sociais">
+             <h4>Siga-nos</h4>
+             <ul>
+                 <li><a href="#">Facebook</a></li>
+                 <li><a href="#">Instagram</a></li>
+                 <li><a href="#">Twitter</a></li>
+             </ul>
+        </section>
+        <p>&copy; 2025 Adega Online. Todos os direitos reservados.</p> 
+    </footer>
+    <!-- Incluir o script de dados PRIMEIRO -->
+    <script src="../js/baseProdutos.js"></script>
+    <!-- Incluir o script que usa os dados DEPOIS -->
+    <script src="../js/detalhesProduto.js"></script>
+</body>
+</html>

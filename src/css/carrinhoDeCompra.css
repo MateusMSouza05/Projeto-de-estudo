@@ -1,0 +1,114 @@
+/* Container principal da página do carrinho */
+.carrinho-container {
+    max-width: 900px; /* Largura máxima para a tabela e total */
+    margin: 40px auto; /* Centraliza e adiciona margem */
+    background-color: #fff; /* Fundo branco */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #8b0000; /* Linha abaixo do título na cor vinho */
+    padding-bottom: 10px;
+}
+
+/* Estilos da Tabela */
+.carrinho-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre bordas */
+    margin-bottom: 30px;
+}
+
+.carrinho-table thead {
+    background-color: #f2f2f2; /* Fundo cinza claro para o cabeçalho */
+    border-bottom: 2px solid #ddd;
+}
+
+.carrinho-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 700;
+    color: #555;
+    text-transform: uppercase; /* Cabeçalhos em maiúsculas */
+    font-size: 0.9rem;
+}
+
+.carrinho-table tbody tr {
+    border-bottom: 1px solid #eee; /* Linha separadora entre produtos */
+}
+
+.carrinho-table tbody tr:last-child {
+    border-bottom: none; /* Remove a borda do último item */
+}
+
+.carrinho-table td {
+    padding: 15px;
+    vertical-align: middle; /* Alinha o conteúdo verticalmente */
+    color: #444;
+}
+
+/* Apply Flexbox to the first cell (Product) */
+.carrinho-table td:first-child {
+    display: flex;        /* Enable Flexbox */
+    align-items: center;  /* Vertically align image and text */
+    gap: 10px;            /* Space between image and text */
+    word-break: break-word; /* Allow long words to break if needed */
+}
+
+/* Style the image within the first cell */
+.carrinho-table td:first-child img {
+    flex-shrink: 0;       /* Prevent image from shrinking */
+    width: 50px;          /* Set a fixed width for the image */
+    height: auto;         /* Maintain aspect ratio */
+    /* vertical-align: middle; is handled by align-items */
+}
+
+/* Alinhamento específico para colunas numéricas */
+.carrinho-table th:nth-child(2), /* Quantidade */
+.carrinho-table td:nth-child(2),
+.carrinho-table th:nth-child(3), /* Preço Unitário */
+.carrinho-table td:nth-child(3),
+.carrinho-table th:nth-child(4), /* Total */
+.carrinho-table td:nth-child(4) {
+    text-align: center;
+}
+
+
+
+/* Seção do Total */
+.carrinho-total {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #8b0000; /* Linha acima do total na cor vinho */
+}
+
+.carrinho-total p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Botão Finalizar Compra */
+.btn-finalizar {
+    background-color: #28a745; /* Cor verde para finalizar */
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-finalizar:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+}
+

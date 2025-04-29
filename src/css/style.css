@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  main {
+    padding: 0 40px;
+  }
+  
+
+  header {
+    background-color: #fff;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .logo-header {
+    height: 130px;
+    width: auto;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    color: #700;
+}
+
+
+.produto-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.produto-link:hover {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Center items horizontally */
+    padding: 20px 0;
+  }
+  
+  #produtos h2 {
+    width: 100%; 
+    text-align: center; 
+    margin-bottom: 25px; 
+    margin-top: 20px; 
+    color: #333;
+  }
+  
+  .produto-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
+    /* Re-apply flex-basis here */
+    flex-basis: calc((100% - 40px) / 3); 
+    max-width: 300px; /* Keep max-width here */
+    min-width: 250px; /* Restore min-width if it was there */
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box; /* Keep box-sizing */
+  }
+  
+  .produto-card:hover {
+    transform: scale(1.05);
+    background-color: #700;
+    color: #ffff;
+  }
+  
+  .produto-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .produto-card h3 {
+    font-size: 1.1rem;
+    margin: 12px 0 8px;
+  }
+  
+  .produto-card span {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+/* Estilos para o botão de comprar */
+.btn-comprar {
+    background-color: #8b0000; /* Cor vinho escuro */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 10px 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar clicável */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    margin-top: 10px; /* Espaço acima do botão */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    width: 100%; /* Faz o botão ocupar a largura do card */
+}
+
+.btn-comprar:hover {
+    background-color: #a52a2a; /* Cor vinho um pouco mais clara no hover */
+    transform: translateY(-2px); /* Leve efeito de levantar ao passar o mouse */
+}
+
+/* Ajuste para o hover do card não sobrescrever a cor do botão */
+.produto-card:hover .btn-comprar {
+    background-color: #a52a2a; /* Mantém a cor de hover do botão */
+    color: #fff; /* Garante que o texto permaneça branco */
+}
+
+  
+/* Footer Styles (Basic Example) */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #555;
+}
+
+footer section {
+    margin-bottom: 15px;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+} 
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #700;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p:last-child { /* Copyright */
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}

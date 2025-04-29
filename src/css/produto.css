@@ -1,0 +1,152 @@
+/* Container principal da página do produto */
+.product-page-container {
+    display: flex; /* Habilita Flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas menores */
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 40px auto; /* Centraliza o container e adiciona margem superior/inferior */
+    background-color: #fff; /* Fundo branco para o container do produto */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    gap: 30px; /* Espaço entre a seção da imagem e a seção de detalhes */
+}
+
+/* Seção da Imagem */
+.product-image-section {
+    flex: 1 1 400px; /* Permite crescer/encolher, base de 400px */
+    max-width: 500px; /* Largura máxima para a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas para a imagem */
+    object-fit: contain;
+}
+
+/* Seção de Detalhes */
+.product-details-section {
+    flex: 1 1 500px; /* Permite crescer/encolher, base de 500px */
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente (opcional) */
+}
+
+.product-title {
+    font-size: 2.2rem; /* Tamanho grande para o título */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.product-wishlist-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.icon-star {
+    color: #f8d64e; /* Cor da estrela */
+    font-size: 1.1rem;
+}
+
+.product-attributes {
+    list-style: none; /* Remove marcadores */
+    padding: 0;
+    margin-bottom: 25px;
+    color: #555;
+}
+
+.product-attributes li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo básico para ícones de atributos (adicione seus próprios ícones) */
+.icon-attribute::before {
+    content: '✓'; /* Exemplo de ícone */
+    color: #8b0000; /* Cor vinho */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Seção de Preços */
+.product-pricing {
+    margin-bottom: 30px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+}
+
+.price-subscriber, .price-regular {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.price-subscriber .price-value {
+    font-size: 1.8rem; /* Preço de assinante em destaque */
+    font-weight: 700;
+    color: #8b0000; /* Cor vinho */
+}
+
+.price-regular {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Seção de Ações (Botões) */
+.product-actions {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+    align-items: center;
+}
+
+.buy-button, .wishlist-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buy-button {
+    background-color: #8b0000; /* Cor vinho principal */
+    color: #fff;
+    flex-grow: 1; /* Faz o botão comprar ocupar mais espaço */
+}
+
+.buy-button:hover {
+    background-color: #a52a2a;
+    transform: translateY(-2px);
+}
+
+.wishlist-button {
+    background-color: #f0f0f0; /* Fundo cinza claro */
+    color: #555;
+    padding: 10px; /* Padding menor para botão de ícone */
+    line-height: 1; /* Ajusta altura da linha para ícone */
+    border: 1px solid #ddd;
+}
+
+.wishlist-button:hover {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+}
+
+.icon-heart {
+    font-size: 1.3rem; /* Tamanho do ícone de coração */
+    color: #dc3545; /* Cor vermelha para o coração */
+}
+
